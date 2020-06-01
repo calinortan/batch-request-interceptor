@@ -19,7 +19,7 @@ app.get("/v1/files", (req, res) => {
     return res.status(404).json({ error: "Not found" });
   }
 
-  return res.json({ items: filteredItems });
+  return res.send({ items: filteredItems });
 });
 
 app.listen(port, () =>
